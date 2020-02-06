@@ -1,0 +1,1 @@
+ALTER TABLE oauth_providers ADD is_trusted BOOLEAN default false;

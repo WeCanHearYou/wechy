@@ -37,6 +37,7 @@ export interface OAuthConfig {
   provider: string;
   displayName: string;
   status: number;
+  isTrusted: boolean;
   clientID: string;
   clientSecret: string;
   authorizeURL: string;

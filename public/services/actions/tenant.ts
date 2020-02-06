@@ -84,6 +84,7 @@ export interface CreateEditOAuthConfigRequest {
   status: number;
   displayName: string;
   clientID: string;
+  isTrusted: boolean;
   clientSecret: string;
   authorizeURL: string;
   tokenURL: string;

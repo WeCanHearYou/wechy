@@ -14,6 +14,7 @@ export const OAuthForm: React.FC<OAuthFormProps> = props => {
   const [provider] = useState((props.config && props.config.provider) || "");
   const [displayName, setDisplayName] = useState((props.config && props.config.displayName) || "");
   const [enabled, setEnabled] = useState((props.config && props.config.status === OAuthConfigStatus.Enabled) || false);
+  const [isTrusted, setTrusted] = useState((props.config && props.config.isTrusted) || false);
   const [clientID, setClientID] = useState((props.config && props.config.clientID) || "");
   const [clientSecret, setClientSecret] = useState((props.config && props.config.clientSecret) || "");
   const [clientSecretEnabled, setClientSecretEnabled] = useState(!props.config);
@@ -33,6 +34,7 @@ export const OAuthForm: React.FC<OAuthFormProps> = props => {
     const result = await actions.saveOAuthConfig({
       provider,
       status: enabled ? OAuthConfigStatus.Enabled : OAuthConfigStatus.Disabled,
+      isTrusted,
       displayName,
       clientID,
       clientSecret: clientSecretEnabled ? clientSecret : "",
@@ -245,6 +247,26 @@ export const OAuthForm: React.FC<OAuthFormProps> = props => {
 }
           `}
         </pre>
+
+        <div className="row">
+          <div className="col-sm-4">
+            <Field label="Trust this provider in private mode">
+              <Toggle active={isTrusted} onToggle={setTrusted} />
+              <span>{isTrusted ? "Trusted" : "Not Trusted"}</span>
+              {isTrusted && (
+                <p className="info">
+                  In private mode, unknown users identified by this provider will be automatically created.
+                </p>
+              )}
+              {!isTrusted && (
+                <p className="info">
+                  In private mode, users identified by this provider will be rejected 
+                  if they are not already members or invited.
+                </p>
+              )}
+            </Field>
+          </div>
+        </div>
 
         <div className="row">
           <div className="col-sm-4">

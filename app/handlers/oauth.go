@@ -101,7 +101,13 @@ func OAuthToken() web.HandlerFunc {
 		}
 		if err != nil {
 			if errors.Cause(err) == app.ErrNotFound {
-				if c.Tenant().IsPrivate {
+				customOAuthConfigByProvider := &query.GetCustomOAuthConfigByProvider{Provider: provider}
+				err = bus.Dispatch(c, customOAuthConfigByProvider)
+				customOAuthConfig := customOAuthConfigByProvider.Result
+				if err != nil {
+					customOAuthConfig = &models.OAuthConfig{IsTrusted: false}
+				}
+				if c.Tenant().IsPrivate && !customOAuthConfig.IsTrusted {
 					return c.Redirect("/not-invited")
 				}
 

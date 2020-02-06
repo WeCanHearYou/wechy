@@ -32,6 +32,7 @@ type CreateEditOAuthConfig struct {
 	Logo              *ImageUpload `json:"logo"`
 	Provider          string       `json:"provider"`
 	Status            int          `json:"status"`
+	IsTrusted         bool         `json:"isTrusted"`
 	DisplayName       string       `json:"displayName"`
 	ClientID          string       `json:"clientID"`
 	ClientSecret      string       `json:"clientSecret"`
@@ -51,6 +52,7 @@ type OAuthConfig struct {
 	DisplayName       string
 	LogoBlobKey       string
 	Status            int
+	IsTrusted         bool
 	ClientID          string
 	ClientSecret      string
 	AuthorizeURL      string
@@ -74,6 +76,7 @@ func (o OAuthConfig) MarshalJSON() ([]byte, error) {
 		"displayName":       o.DisplayName,
 		"logoBlobKey":       o.LogoBlobKey,
 		"status":            o.Status,
+		"isTrusted":         o.IsTrusted,
 		"clientID":          o.ClientID,
 		"clientSecret":      secret,
 		"authorizeURL":      o.AuthorizeURL,
