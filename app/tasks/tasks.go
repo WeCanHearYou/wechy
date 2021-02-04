@@ -100,7 +100,7 @@ func SendChangeEmailConfirmation(model *models.ChangeUserEmail) worker.Task {
 	})
 }
 
-//NotifyAboutNewPost sends a notification (web and email) to subscribers
+//NotifyAboutNewPost sends a notification to subscribers and webhook
 func NotifyAboutNewPost(post *models.Post) worker.Task {
 	return describe("Notify about new post", func(c *worker.Context) error {
 		// Web notification
@@ -156,11 +156,21 @@ func NotifyAboutNewPost(post *models.Post) worker.Task {
 			Props:        props,
 		})
 
+		// Webhook notification
+		link = fmt.Sprintf("%s/posts/%d/%s", web.BaseURL(c), post.Number, post.Slug)
+		bus.Publish(c, &cmd.SendWebhookNotification{
+			Type:    "new_post",
+			Title:   post.Title,
+			Content: post.Description,
+			Link:    link,
+			User:    *c.User(),
+		})
+
 		return nil
 	})
 }
 
-//NotifyAboutNewComment sends a notification (web and email) to subscribers
+//NotifyAboutNewComment sends a notification to subscribers and webhook
 func NotifyAboutNewComment(post *models.Post, comment *models.NewComment) worker.Task {
 	return describe("Notify about new comment", func(c *worker.Context) error {
 		// Web notification
@@ -217,11 +227,22 @@ func NotifyAboutNewComment(post *models.Post, comment *models.NewComment) worker
 			Props:        props,
 		})
 
+		// Webhook notification
+		title = fmt.Sprintf("%s left a comment on %s", c.User().Name, post.Title)
+		link = fmt.Sprintf("%s/posts/%d/%s", web.BaseURL(c), post.Number, post.Slug)
+		bus.Publish(c, &cmd.SendWebhookNotification{
+			Type:    "new_comment",
+			Title:   title,
+			Content: comment.Content,
+			Link:    link,
+			User:    *c.User(),
+		})
+
 		return nil
 	})
 }
 
-//NotifyAboutStatusChange sends a notification (web and email) to subscribers
+//NotifyAboutStatusChange sends a notification to subscribers and webhook
 func NotifyAboutStatusChange(post *models.Post, prevStatus enum.PostStatus) worker.Task {
 	return describe("Notify about post status change", func(c *worker.Context) error {
 		//Don't notify if previous status is the same
@@ -289,11 +310,22 @@ func NotifyAboutStatusChange(post *models.Post, prevStatus enum.PostStatus) work
 			Props:        props,
 		})
 
+		// Webhook notification
+		title = fmt.Sprintf("%s changed status of %s to %s", c.User().Name, post.Title, post.Status.Name())
+		link = fmt.Sprintf("%s/posts/%d/%s", web.BaseURL(c), post.Number, post.Slug)
+		bus.Publish(c, &cmd.SendWebhookNotification{
+			Type:    "change_status",
+			Title:   title,
+			Content: post.Response.Text,
+			Link:    link,
+			User:    *c.User(),
+		})
+
 		return nil
 	})
 }
 
-//NotifyAboutDeletedPost sends a notification (web and email) to subscribers of the post that has been deleted
+//NotifyAboutDeletedPost sends a notification to subscribers and webhook of the post that has been deleted
 func NotifyAboutDeletedPost(post *models.Post) worker.Task {
 	return describe("Notify about deleted post", func(c *worker.Context) error {
 
@@ -343,6 +375,15 @@ func NotifyAboutDeletedPost(post *models.Post) worker.Task {
 			To:           to,
 			TemplateName: "delete_post",
 			Props:        props,
+		})
+
+		// Webhook notification
+		title = fmt.Sprintf("%s deleted %s", c.User().Name, post.Title)
+		bus.Publish(c, &cmd.SendWebhookNotification{
+			Type:    "delete_post",
+			Title:   title,
+			Content: post.Response.Text,
+			User:    *c.User(),
 		})
 
 		return nil
