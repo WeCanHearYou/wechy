@@ -1,0 +1,583 @@
+{
+  "": "",
+  "//developer": {
+    "mozilla": {
+      "org/en-US/docs/Learn/CSS'>CSS</a>": {
+        "": ""
+      }
+    }
+  },
+  "1": {
+    " Who are you?": ""
+  },
+  "1 with minimum dimensions of 200x200 pixels": {
+    "": ""
+  },
+  "1 with minimum dimensions of 24x24 pixels": {
+    "": ""
+  },
+  "1 with minimum dimensions of 24x24 pixels.": "",
+  "1 with minimum dimensions of 50x50 pixels": {
+    "": ""
+  },
+  "1 with minimum dimensions of 50x50 pixels.": "",
+  "1. Who are you?": "1. 名前とメールアドレス",
+  "2": {
+    " What is this Feedback Forum for?": ""
+  },
+  "2. What is this Feedback Forum for?": "2. 組織名またはサービス名",
+  "A letter avatar based on your initials is generated for you": {
+    "": ""
+  },
+  "A letter avatar based on your initials is generated for you.": "あなたのイニシャルを元にしたアバターが生成されます。",
+  "A private site prevents unauthenticated users from viewing or interacting with its content": {
+    "": "",
+    " ": ""
+  },
+  "A private site prevents unauthenticated users from viewing or interacting with its content.": "プライベートサイトは、認証されていないユーザーがコンテンツを閲覧したり、操作したりすることができないようになっています。",
+  "Actions": "アクション",
+  "and": "と",
+  "Add new": "追加",
+  "Additional information is available in our": "追加情報は、当社の",
+  "Administration": "管理",
+  "Administrators": "管理者",
+  "Advanced": "高度な設定",
+  "An email message was sent to": "",
+  "Are you sure?": "",
+  "Authentication": "認証",
+  "Authorize URL": "",
+  "Avatar": "アバター",
+  "Avoid nested selectors": "ネストしたセレクタを避ける",
+  "Backup your data": "",
+  "Because this is your first sign in, please enter your name": {
+    "": ""
+  },
+  "Because this is your first sign in, please enter your name.": "",
+  "Block User": "ユーザーをブロック",
+  "Blocked": "ブロックした",
+  "Button Preview": "",
+  "Callback URL": "",
+  "Cancel": "キャンセル",
+  "Click the link and you’ll be signed in": {
+    "": ""
+  },
+  "Click the link and you’ll be signed in.": "",
+  "Click the link to finish your registration": {
+    "": ""
+  },
+  "Click the link to finish your registration.": "",
+  "Click the link to update your email": {
+    "": ""
+  },
+  "Click the link to complete the registration.": "リンクをクリックすると、登録が完了します。",
+  "No similar posts matched `": "似たような投稿はありません `",
+  "Click the link to update your email.": "リンクをクリックして、メールを更新してください。",
+  "Client ID": "",
+  "Client Secret": "",
+  "Collaborators": "共同作業者",
+  "Color": "色",
+  "Complete your profile": "",
+  "Confirm": "確認",
+  "Confirm your new email": "新しいメールを確認",
+  "Confirmation": "確認事項",
+  "Congratulations! It worked!": "",
+  "Consider voting on existing posts instead.": "既存の記事への投票を検討する",
+  "Custom": "カスタム",
+  "Custom CSS": "",
+  "Custom CSS allows you to change the look and feel of Fider and apply your own branding": {
+    "": ""
+  },
+  "Custom CSS allows you to change the look and feel of Fider and apply your own branding.": "カスタムCSSにより、FiderのUIを変更し、独自のブランディングを適用することができます。",
+  "Custom CSS might break the design of your site as Fider evolves": {
+    " You can minimize conflict by following these recommendations": ""
+  },
+  "Custom CSS might break the design of your site as Fider evolves. You can minimize conflict by following these recommendations": "カスタムCSSは、Fiderの進化に伴い、サイトのデザインを崩す可能性があります。以下の推奨事項に従うことで、衝突を最小限に抑えることができます",
+  "Custom Domain": "",
+  "Custom domains allow you to access your app via your own domain name (for example, ": "",
+  "Customize only the essential": {
+    "": ""
+  },
+  "Customize only the essential.": "必要なものだけをカスタマイズする。",
+  "Delete": "削除",
+  "Delete My Account": "アカウントの削除",
+  "Delete account": "アカウントの削除",
+  "Delete tag": "",
+  "Demote to Visitor": "",
+  "Describe your suggestion (optional)": "詳しい内容（任意)",
+  "Description": "内容",
+  "Disabled": "無効",
+  "Discussion": "投稿のコメント",
+  "Display Name": "",
+  "Download your data": "収集した投稿をダウンロードできます",
+  "Edit": "編集",
+  "Email": "メールアドレス",
+  "Email is not required, but highly recommended": {
+    " If invalid or not found, new users won&apos;t be able to receive notifications": {
+      "": ""
+    }
+  },
+  "Email is not required, but highly recommended. If invalid or not found, new users won&apos;t be able to receive notifications": "",
+  "Enabled": "有効",
+  "Enter your suggestion here": {
+    "": {
+      "": {
+        "": ""
+      }
+    }
+  },
+  "Enter your suggestion here.": "",
+  "Enter your suggestion here...": "フィードバックを入力...",
+  "Error": "",
+  "Error #1": "",
+  "Error #2": "",
+  "Export": "",
+  "Export Posts": "",
+  "Failed to delete your account": {
+    " Try again later": ""
+  },
+  "Failed to retrieve OAuth configuration": {
+    " Try again later": ""
+  },
+  "Fider might change the structure of the HTML at any time": {
+    " It&apos;s likely that such changes would invalidate some rules": {
+      "": ""
+    }
+  },
+  "General": "一般",
+  "Gravatar": "",
+  "Hello, ": "こんにちは、",
+  "ID": "",
+  "I have read and agree to the ": "私は同意しました。",
+  "If enabled, only already registered and invited users will be able to sign in to this site": {
+    "": ""
+  },
+  "If enabled, only already registered and invited users will be able to sign in to this site.": "有効にすると、すでに登録されているユーザーと招待されたユーザーだけが、このサイトにサインインできます。",
+  "If you have an account or an invitation, you may use following options to sign in": {
+    "": ""
+  },
+  "If you have an account or an invitation, you may use following options to sign in.": "",
+  "Invitation": "招待メール",
+  "Invitations": "招待",
+  "Invite people to share their feedback": "招待して、フィードバックを共有する",
+  "It is recommended to only request the minimum scopes we need to fetch the user <strong>id</strong>, <strong>name</strong> and <strong>email</strong> ": {
+    " Multiple scopes must be separated by space": {
+      "": ""
+    }
+  },
+  "It is recommended to only request the minimum scopes we need to fetch the user id, name and email. Multiple scopes must be separated by space.": "ユーザーID、名前、Eメールを取得するために必要な最小限のスコープのみをリクエストすることをお勧めします。複数のスコープはスペースで区切る必要があります。",
+  "It&apos;s recommended that you create <strong>at least 3</strong> suggestions here before sharing this site. The initial content is important to start engaging your audience.": "このサイトを共有する前に、ここで<strong>少なくとも3つ</strong>の提案を作成することをおすすめします。最初の投稿は、閲覧者を信頼を得るために丁寧に書きましょう。",
+  "JSON Path": "",
+  "Keep it simple": "シンプルであること",
+  "Leave a comment": "コメントする",
+  "Letter": "イニシャル",
+  "Logo": "ロゴ",
+  "Manage your profile settings": "プロフィール情報の設定",
+  "Manage your site administrators and collaborators": "サイト管理者や共同作業者の管理",
+  "Manage your site authentication": "認証の設定",
+  "Manage your site privacy": "プライバシーの設定",
+  "Manage your site settings": "サイトの高度な設定",
+  "Manage your site tags": "タグの設定",
+  "Mark All as Read": "すべてを既読にする",
+  "Members": "メンバー",
+  "Message": "メッセージ",
+  "Moderation": "投稿の管理",
+  "Most Discussed": "",
+  "Most Wanted": "",
+  "Name": "名前",
+  "New OAuth Provider": "",
+  "New Post": "新しい投稿",
+  "No country is selected": "",
+  "No description provided": {
+    "": ""
+  },
+  "No description provided.": "この投稿に詳細の内容はありません。",
+  "No one has commented yet.": "この投稿に、まだコメントはありません。",
+  "No posts have been created yet": {
+    "": ""
+  },
+  "No posts have been created yet.": "まだ記事は作成されていません。",
+  "No results matched your search, try something different": {
+    "": ""
+  },
+  "No results matched your search, try something different.": "",
+  "No unread notifications": {
+    "": ""
+  },
+  "No unread notifications.": "未読の通知はありません。",
+  "No users found": {
+    "": ""
+  },
+  "None": "",
+  "Notifications": "通知",
+  "OAuth Documentation": "OAuth ドキュメント",
+  "OAuth Provider": "",
+  "OAuth Providers": "OAuth プロバイダ",
+  "OK": "",
+  "Path to extract User ID from the JSON": {
+    " This ID <strong>must</strong> be unique within the provider or unexpected side effects might happen": {
+      " For example below, the path would be <strong>id</strong>": {
+        "": ""
+      }
+    }
+  },
+  "Path to extract User ID from the JSON. This ID <strong>must</strong> be unique within the provider or unexpected side effects might happen. For example below, the path would be <strong>id</strong>.": "JSONからUser IDを抽出するためのパス。このIDは<strong>必ず</strong>プロバイダ内で一意でなければならず、そうでない場合は予期せぬ副作用が発生する可能性があります。以下の例では、パスは<strong>id</strong>となります。",
+  "Path to extract user Display Name from the JSON": {
+    " This is optional, but <strong>highly</strong> recommended": {
+      " For the example below, the path would be <strong>profile": {
+        "name</strong>": {
+          "": ""
+        }
+      }
+    }
+  },
+  "Path to extract user Display Name from the JSON. This is optional, but <strong>highly</strong> recommended. For the example below, the path would be <strong>profile.name</strong>.": "JSONからユーザーのDisplay Nameを抽出するパスです。これはオプションですが、<strong>非常に</strong>推奨されます。以下の例では、パスは<strong>profile.name</strong>となります。",
+  "Path to extract user Email from the JSON": {
+    " This is optional, but <strong>highly</strong> recommended": {
+      " For the example below, the path would be <strong>profile": {
+        "emails[0]</strong>": {
+          "": ""
+        }
+      }
+    }
+  },
+  "Path to extract user Email from the JSON. This is optional, but <strong>highly</strong> recommended. For the example below, the path would be <strong>profile.emails[0]</strong>.": "JSONからユーザーのEmailを抽出するためのパスです。これは任意ですが、<strong>強く</strong>推奨します。以下の例では、パスは<strong>profile.email[0]</strong>となります。",
+  "Please note that it may take up to 72 hours for the change to take effect worldwide due to DNS propagation": {
+    "": ""
+  },
+  "Posted by": "投稿者",
+  "Preview": "プレビュー",
+  "Privacy": "プライバシー",
+  "Privacy Policy": "プライバシーポリシー",
+  "Private": "非公開",
+  "Private Tags": "非公開タグ",
+  "Private site": "プライベートサイト",
+  "Profile API URL": "",
+  "Promote to Administrator": "管理者に変更",
+  "Promote to Collaborator": "共同作業者に変更",
+  "Public": "公開",
+  "Public Tags": "公開タグ",
+  "Read on last 30 days": "過去30日間の通知",
+  "Recent": "",
+  "Regenerate API Key": "APIキーの再生成",
+  "Respond": "レスポンス",
+  "Sample Invite": "サンプル招待メール",
+  "Save": "保存",
+  "Scope": "",
+  "Search for users by name": {
+    "": {
+      "": {
+        "": ""
+      }
+    }
+  },
+  "Search for users by name...": "ユーザー名で検索",
+  "Send": "送信",
+  "Send a sample email to": "にメールを送信する",
+  "Send a sample email to email": "{{ email }} にメールを送信する",
+  "Send invitations to": "招待メールの送付先",
+  "Settings": "設定",
+  "Shoot! Well, this is unexpected…": "",
+  "Sign in": "サインイン",
+  "Sign out": "サインアウト",
+  "Similar posts": "似たような投稿",
+  "Site Settings": "サイト設定",
+  "Something went wrong": {
+    "": {
+      "": {
+        "": ""
+      }
+    }
+  },
+  "Something went wrong.": "",
+  "Status": "ステータス",
+  "Status Changed": "ステータスの変更",
+  "Status is mandatory": "",
+  "Stay up to date with what's happening": "最新の情報を表示されています",
+  "Stored it securely on your servers and never store it in the client side of your app": {
+    "": ""
+  },
+  "Stored it securely on your servers and never store it in the client side of your app.": "",
+  "Subject": "件名",
+  "Submit": "送信",
+  "Tags": "タグ",
+  "Test": "テスト",
+  "Thank you for registering!": "ご登録ありがとうございます。",
+  "The API Key is only shown whenever generated": {
+    " If your Key is lost or has been compromised, generated a new one and take note of it": {
+      "": ""
+    }
+  },
+  "The API Key is only shown whenever generated. If your Key is lost or has been compromised, generated a new one and take note of it": "",
+  "The API Key is only shown whenever generated. If your Key is lost or has been compromised, generated a new one and take note of it.": "APIキーは、生成されたときにのみ表示されます。APIキーを忘れた場合は、新しいキーを生成して保存してください。",
+  "The URL to fetch the authenticated user info": {
+    " If empty, Fider will try to parse the user info from the Access Token": {
+      "": ""
+    }
+  },
+  "The URL to fetch the authenticated user info. If empty, Fider will try to parse the user info from the Access Token.": "認証されたユーザー情報を取得するためのURLです。空の場合、Fiderはアクセストークンからユーザー情報を解析しようとします。",
+  "The message is shown on this site&apos;s home page": {
+    " Use it to help visitors \n            understad what this space is about and the importance of their feedback": {
+      "\n            Leave it empty for a default message": {
+        "": ""
+      }
+    },
+    " Use it to help visitors understad what this space is about and the importance of their feedback": {
+      " Leave it empty for a default message": {
+        "": ""
+      }
+    }
+  },
+  "The message is shown on this site&apos;s home page. Use it to help visitors understad what this space is about and the importance of their feedback. Leave it empty for a default message.": "このメッセージは、トップページに表示されます。訪問者がこのスペースについて理解し、フィードバックの重要性を理解するために使用します。空欄のままにしておくと、デフォルトのメッセージが表示されます。",
+  "The tag": "",
+  "The title": "",
+  "The title is used on the header, emails, notifications and SEO content": {
+    " Keep it short and simple": {
+      " \n            The product/service name is usually the best choice": {
+        "": ""
+      },
+      " The product/service name is usually the best choice": {
+        "": ""
+      }
+    }
+  },
+  "Terms of Service": "利用規約",
+  "The title is used on the header, emails, notifications and SEO content. Keep it short and simple The product/service name is usually the best choice.": "",
+  "The title is used on the header, emails, notifications and SEO content. Keep it short and simple. The product/service name is usually the best choice.": "タイトルは、サイトの上部、メール、通知、SEOコンテンツなどで使用します。短くてシンプルにしましょう。通常は、製品/サービス名が最適です。",
+  "There aren’t any private tags yet": {
+    "": ""
+  },
+  "There aren’t any private tags yet.": "まだ非公開タグはありません。",
+  "There aren’t any public tags yet": {
+    "": ""
+  },
+  "There aren’t any public tags yet.": "まだ公開タグはありません。",
+  "These tags are only visible for members of this site": {
+    "": ""
+  },
+  "These tags are only visible for members of this site.": "これらのタグは、このサイトのメンバーにのみ表示されます。",
+  "These tags are visible to all visitors": {
+    "": ""
+  },
+  "These tags are visible to all visitors.": "これらのタグは、すべての訪問者に表示されます。",
+  "This comment has been edited by {{ name }} on {{ editedAt }}": "このコメントは {{ name }} により、{{ editedAt }} に変更されました",
+  "This is a powerful and flexible feature, but requires basic understanding of ": "",
+  "This is a powerful and flexible feature, but requires basic understanding of <a href='https://developer.mozilla.org/en-US/docs/Learn/CSS'>CSS</a>.": "これはサイトの見た目をカスタムできる機能ですが、<a href='https://developer.mozilla.org/en-US/docs/Learn/CSS'>CSS</a>の基本的な理解が必要です。",
+  "This is the content of the invite": {
+    " Be polite and explain what this invite is for, otherwise there&apos;s a high change people will ignore your\n              message": {
+      "": ""
+    },
+    " Be polite and explain what this invite is for, otherwise there&apos;s a high change people will ignore your message": {
+      "": ""
+    }
+  },
+  "This is the content of the invite. Be polite and explain what this invite is for, otherwise there&apos;s a high change people will ignore your\n              message": "",
+  "This is the content of the invite. Be polite and explain what this invite is for, otherwise there&apos;s a high change people will ignore your message.": "これが招待メールの内容です。丁寧に、何のためのなのかを説明しないと、無視される可能性が高くなります。",
+  "This is the subject that will be used on the invitation email": {
+    " Keep it short and sweet": {
+      "": ""
+    }
+  },
+  "This is the subject that will be used on the invitation email. Keep it short and sweet.": "これは、招待状のメールで使用される件名です。簡潔にまとめてください。",
+  "This operation <strong>cannot</strong> be undone": {
+    "": ""
+  },
+  "This operation <strong>cannot</strong> be undone.": "<strong>この操作は元に戻すことはできません。</strong>",
+  "This process is irreversible": {
+    "": "",
+    " Please be certain": {
+      "": ""
+    }
+  },
+  "This process is irreversible. Please be certain.": "このプロセスは元に戻すことができません。",
+  "This provider will be available for everyone to use during the sign in process": {
+    "\n                     It is recommended that you keep it disable and test it before enabling it": {
+      " \n                     The Test button is available after saving this configuration": {
+        "": ""
+      }
+    }
+  },
+  "This provider will be available for everyone to use during the sign in process.\n                     It is recommended that you keep it disable and test it before enabling it \n                     The Test button is available after saving this configuration": "",
+  "This section is used to configure how Fider will fetch user after the authentication process": {
+    "": ""
+  },
+  "This section is used to configure how Fider will fetch user after the authentication process.": "このセクションでは、Fiderが認証プロセス後にどのようにユーザーを取得するかを設定します。",
+  "This text is used as a placeholder for the suggestion&apos;s text box": {
+    " Use it to invite your visitors into sharing their suggestions and feedback": {
+      " Leave it empty for a default message": {
+        "": ""
+      }
+    }
+  },
+  "This text is used as a placeholder for the suggestion&apos;s text box. Use it to invite your visitors into sharing their suggestions and feedback. Leave it empty for a default message.": "このテキストは、提案用テキストボックスのプレースホルダーとして使用されます。訪問者に提案やフィードバックの共有を促すために使用します。空欄のままにしておくと、デフォルトのメッセージが表示されます。",
+  "Title": "タイトル",
+  "Title is mandatory": "",
+  "To learn how to use the API, read the": "APIの使用方法については、以下をご覧ください。",
+  "To reactivate this site, sign in with an administrator account and update the required settings": {
+    "": ""
+  },
+  "To reactivate this site, sign in with an administrator account and update the required settings.": "",
+  "Token URL": "",
+  "Trending": "",
+  "Unblock User": "",
+  "Unread": "未読",
+  "Use following panel to choose which events you&apos;d like to receive notification": "以下のパネルで、通知を受けとる項目を選択してください。",
+  "Use this button to download a CSV file with all posts \n            in this site": {
+    " This can be useful to analyse the data with \n            an external tool or simply to back it up": {
+      "": ""
+    }
+  },
+  "Use this button to download a CSV file with all posts \n            in this site. This can be useful to analyse the data with \n            an external tool or simply to back it up": "",
+  "Use this button to download a CSV file with all posts in this site": {
+    " This can be useful to analyse the data with an external tool or simply to back it up": {
+      "": ""
+    }
+  },
+  "Use this button to download a CSV file with all posts in this site. This can be useful to analyse the data with an external tool or simply to back it up.": "このボタンをクリックすると、このサイト内のすべての投稿を含むCSVファイルをダウンロードできます。このファイルは、外部のツールでデータを分析したり、単にデータをバックアップするのに役立ちます。",
+  "Use this button to download a ZIP file with your data in JSON format": {
+    " This is a full backup and contains all of your data": {
+      "": ""
+    }
+  },
+  "Use this button to download a ZIP file with your data in JSON format. This is a full backup and contains all of your data.": "このボタンをクリックすると、あなたのデータをJSON形式で保存したZIPファイルをダウンロードしてください。このバックアップファイルには、すべてのデータが含まれています。",
+  "User Profile": "",
+  "Users won&apos;t be able to sign in with this Provider": {
+    "": ""
+  },
+  "Version updates may change the structure of the HTML and may disable custom CSS": {
+    "": ""
+  },
+  "Version updates may change the structure of the HTML and may disable custom CSS.": "バージョンの更新により、HTMLの構造が変更される可能性があり、カスタムCSSが無効される可能性があります。",
+  "Visibility": "公開 or 非公開",
+  "Voters": "投稿したユーザー",
+  "Votes from this post will be merged into original post": {
+    "": ""
+  },
+  "We accept JPG, GIF and PNG images, smaller than 100KB and with an aspect ratio of 1:1 with minimum dimensions of 200x200 pixels.": "JPG、GIF、PNGの画像は、100KB以下で、アスペクト比が1:1、最小寸法が200x200ピクセルの画像をアップロードしてください。",
+  "We accept JPG, GIF and PNG images, smaller than 100KB and with an aspect ratio of 1:1 with minimum dimensions of 50x50 pixels.": "画像の形式はJPG、GIF、PNGで、サイズは100KB以下で、アスペクト比が1:1、最小寸法が50x50ピクセルの画像をアップロードしてください。",
+  "We accept JPG, GIF and PNG images, smaller than 50KB and with an aspect ratio of 1:1 with minimum dimensions of 24x24 pixels.": "50KB以下で、アスペクト比が1:1、最小寸法が24x24ピクセルのJPG、GIF、PNG画像をアップロードしてください。",
+  "We have just sent a confirmation link to": "",
+  "We have just sent a confirmation link to ": "確認用のリンクをこちらのメールアドレスに送信しました。",
+  "We highly recommend to send yourself a sample email for you to verify if everything is correct before inviting your list of contacts": {
+    "": ""
+  },
+  "We highly recommend to send yourself a sample email for you to verify if everything is correct before inviting your list of contacts.": "連絡先リストを招待する前に、すべてが正しいかどうかを確認するために、サンプルメールを自分に送ることができます。",
+  "We need to identify you to setup your new Fider account": {
+    "": ""
+  },
+  "We need to identify you to setup your new Fider account.": "お客様の新しいFiderアカウントを作成するために、お客様の名前を設定する必要があります。",
+  "We'd love to hear what you're thinking about": {
+    " \n\nWhat can we do better? This is the place for you to vote, discuss and share ideas": {
+      "": ""
+    }
+  },
+  "We'd love to hear what you're thinking about. \n\nWhat can we do better? This is the place for you to vote, discuss and share ideas.": "あなたが考えていることをぜひ聞かせてください。\n\nどうすればもっと良くなるのか？ここは、あなたが投票したり、議論したり、アイデアを共有するための場所です。",
+  "Welcome Message": "ウェルカム メッセージ",
+  "What do you want to see?": "",
+  "What's going on with this post? Let your users know what are your plans": {
+    "": {
+      "": {
+        "": ""
+      }
+    }
+  },
+  "What's going on with this post? Let your users know what are your plans...": "ユーザーに返答をする...",
+  "When you choose to delete your account, we will erase all your personal information forever": {
+    " The content you have published will remain, but it will be anonymised": {
+      "": ""
+    }
+  },
+  "When you choose to delete your account, we will erase all your personal information forever. The content you have published will remain, but it will be anonymised.": "お客様がアカウントの削除を選択された場合、当社はお客様のすべての個人情報を永久に消去します。あなたが公開したコンテンツは残りますが、匿名化されます。",
+  "Whenever you&apos;re ready, click the following button to send out these invites": {
+    "": ""
+  },
+  "Whenever you&apos;re ready, click the following button to send out these invites.": "準備ができたら、次のボタンをクリックして、招待状を送信してください。",
+  "Why are you deleting this post? (optional)": "なぜこの投稿を削除するのですか？(任意)",
+  "You can send this invite to a maximum of 30 recipients each time": {
+    "": ""
+  },
+  "You can send this invite to a maximum of 30 recipients each time.": "この招待状は、1回につき最大30人の受信者に送ることができます。",
+  "You can use these section to add any authentication provider thats supports the OAuth2 protocol": {
+    "": ""
+  },
+  "You can use these section to add any authentication provider thats supports the OAuth2 protocol.": "このセクションでは、OAuth2プロトコルをサポートする任意の認証プロバイダを追加できます。",
+  "You&apos;ll not receive any notification about this post": {
+    "": ""
+  },
+  "You&apos;ll not receive any notification about this post.": "この投稿に関する通知は届きません。",
+  "Your account doesn't have an email": {
+    "": ""
+  },
+  "Your account doesn't have an email.": "あなたのアカウントにはメールがありません。",
+  "Your email is private and will never be publicly displayed": {
+    "": ""
+  },
+  "Your email is private and will never be publicly displayed.": "お客様のメールは非公開であり、一般に公開されることはありません。",
+  "Your privacy settings have been saved": {
+    "": ""
+  },
+  "Your profile doesn&apos;t have an email": "",
+  "You’re receiving notifications about activity on this post": {
+    "": ""
+  },
+  "You’re receiving notifications about activity on this post.": "この投稿に関する通知が届きます。",
+  "administrator": "管理者",
+  "blocked": "ブロック",
+  "can edit and manage content, but not permissions and settings": {
+    "": ""
+  },
+  "can edit and manage content, but not permissions and settings.": "は、コンテンツの編集・管理はできますが、権限や設定はできません。",
+  "change": "変更",
+  "collaborator": "",
+  "comments on all posts unless individually unsubscribed": "全ての投稿のコメント",
+  "comments on posts you've subscribed to": "購読している投稿へのコメント",
+  "description": "",
+  "displayName": "",
+  "edited": "変更済み",
+  "feedback": {
+    "yourcompany": {
+      "com": ""
+    }
+  },
+  "have full access to edit and manage content, permissions and all site settings": {
+    "": ""
+  },
+  "have full access to edit and manage content, permissions and all site settings.": "は、コンテンツ、権限、およびすべてのサイト設定を編集・管理するための完全なアクセス権を有しています。",
+  "is a private space and requires an invitation to join it": {
+    "": ""
+  },
+  "is a private space and requires an invitation to join it.": "",
+  "is currently locked": {
+    "": ""
+  },
+  "Unsubscribe": "通知を受け取らない",
+  "Subscribe": "通知を受け取る",
+  "is currently locked.": "",
+  "logo": "ロゴ",
+  "more": "もっと見る",
+  "new posts on this site": "このサイトの新着投稿",
+  "official documentation": "公式ドキュメント",
+  "randomize": "ランダムで生成",
+  "see details": "詳細を見る",
+  "status": "ステータス",
+  "status change on all posts unless individually unsubscribed": "全ての投稿のステータス変更",
+  "status change on posts you've subscribed to": "購読している投稿のステータス変更",
+  "subdomain": "",
+  "title": "タイトル",
+  "users are unable to log into this site": {
+    "": ""
+  },
+  "users are unable to log into this site.": "ユーザーは、このサイトにログインできなくなります。",
+  "view more": "",
+  "will be removed from all posts": {
+    "": ""
+  },
+  "will be removed from all posts.": "",
+  "will be used based on your email": {
+    " If you don&apos;t have a Gravatar, a letter avatar based on your initials is generated for you": {
+      "": ""
+    }
+  },
+  "will be used based on your email. If you don&apos;t have a Gravatar, a letter avatar based on your initials is generated for you": "",
+  "will be used based on your email. If you don&apos;t have a Gravatar, a letter avatar based on your initials is generated for you.": "Gravatarはメールに基づいて使用されます。イニシャルを元にしたアバターが生成されます。",
+  "your company or product name": "会社名または製品名"
+}

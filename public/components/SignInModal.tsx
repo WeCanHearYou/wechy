@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react"
 import { Modal, SignInControl, LegalFooter } from "@fider/components"
 import { Button } from "./common"
+import { useTranslation } from "react-i18next"
 
 interface SignInModalProps {
   isOpen: boolean
@@ -9,6 +10,7 @@ interface SignInModalProps {
 
 export const SignInModal: React.StatelessComponent<SignInModalProps> = (props) => {
   const [confirmationAddress, setConfirmationAddress] = useState("")
+  const { t } = useTranslation()
 
   useEffect(() => {
     if (confirmationAddress) {
@@ -28,7 +30,8 @@ export const SignInModal: React.StatelessComponent<SignInModalProps> = (props) =
   const content = confirmationAddress ? (
     <>
       <p>
-        We have just sent a confirmation link to <b>{confirmationAddress}</b>. <br /> Click the link and you’ll be signed in.
+        {t("We have just sent a confirmation link to ")}
+        <b>{confirmationAddress}</b>. <br /> {t("Click the link and you’ll be signed in.")}
       </p>
       <p>
         <Button variant="tertiary" onClick={closeModal}>

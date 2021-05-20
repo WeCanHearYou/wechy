@@ -1,6 +1,7 @@
 import React from "react"
 import { Modal, Checkbox } from "@fider/components"
 import { useFider } from "@fider/hooks"
+import { useTranslation } from "react-i18next"
 
 interface LegalAgreementProps {
   onChange: (agreed: boolean) => void
@@ -8,11 +9,12 @@ interface LegalAgreementProps {
 
 export const TermsOfService = () => {
   const fider = useFider()
+  const { t } = useTranslation()
 
   if (fider.settings.hasLegal) {
     return (
       <a href="/terms" className="text-link" target="_blank">
-        Terms of Service
+        {t("Terms of Service")}
       </a>
     )
   }
@@ -21,11 +23,12 @@ export const TermsOfService = () => {
 
 export const PrivacyPolicy = () => {
   const fider = useFider()
+  const { t } = useTranslation()
 
   if (fider.settings.hasLegal) {
     return (
       <a href="/privacy" className="text-link" target="_blank">
-        Privacy Policy
+        {t("Privacy Policy")}
       </a>
     )
   }
@@ -34,11 +37,13 @@ export const PrivacyPolicy = () => {
 
 export const LegalNotice = () => {
   const fider = useFider()
+  const { t } = useTranslation()
 
   if (fider.settings.hasLegal) {
     return (
       <p className="text-muted">
-        By signing in, you agree to the <PrivacyPolicy /> and <TermsOfService />.
+        {t("By signing in, you agree to the ")}
+        <PrivacyPolicy /> {t("and")} <TermsOfService />.
       </p>
     )
   }
@@ -60,11 +65,13 @@ export const LegalFooter = () => {
 
 export const LegalAgreement: React.FunctionComponent<LegalAgreementProps> = (props) => {
   const fider = useFider()
+  const { t } = useTranslation()
 
   if (fider.settings.hasLegal) {
     return (
       <Checkbox field="legalAgreement" onChange={props.onChange}>
-        I have read and agree to the <PrivacyPolicy /> and <TermsOfService />.
+        {t("I have read and agree to the ")}
+        <PrivacyPolicy /> {t("and")} <TermsOfService />.
       </Checkbox>
     )
   }

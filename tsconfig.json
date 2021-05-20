@@ -18,6 +18,7 @@
     "importHelpers": true,
     "noEmitHelpers": true,
     "noUnusedLocals": true,
+    "resolveJsonModule": true,
     "paths": {
       "@fider/*": ["*"]
     }

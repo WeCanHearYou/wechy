@@ -5,6 +5,10 @@ import ReactDOM from "react-dom"
 import { resolveRootComponent } from "@fider/router"
 import { Header, ErrorBoundary, Loader } from "@fider/components"
 import { classSet, Fider, FiderContext, actions } from "@fider/services"
+import i18n from "i18next"
+import { initReactI18next } from "react-i18next"
+import enJson from "./locales/en.json"
+import jaJson from "./locales/ja.json"
 
 const Loading = () => (
   <div className="page">
@@ -34,6 +38,19 @@ window.addEventListener("error", (evt: ErrorEvent) => {
 })
 ;(() => {
   const fider = Fider.initialize()
+  const defaultLanguage = "en"
+  i18n.use(initReactI18next).init({
+    debug: true,
+    resources: {
+      en: { translation: enJson },
+      ja: { translation: jaJson },
+    },
+    lng: defaultLanguage,
+    fallbackLng: false,
+    returnEmptyString: false,
+    keySeparator: ">",
+    nsSeparator: "|",
+  })
 
   __webpack_nonce__ = fider.session.contextID
   __webpack_public_path__ = `${fider.settings.assetsURL}/assets/`

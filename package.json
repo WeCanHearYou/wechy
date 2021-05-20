@@ -4,10 +4,18 @@
   "repository": "https://github.com/getfider/fider",
   "private": true,
   "dependencies": {
+    "@babel/cli": "^7.13.16",
+    "@babel/core": "^7.13.16",
+    "@babel/plugin-proposal-class-properties": "^7.13.0",
+    "@babel/preset-env": "^7.13.15",
+    "@babel/preset-react": "^7.13.13",
+    "@babel/preset-typescript": "^7.13.0",
+    "babel-plugin-i18next-extract": "^0.8.3",
     "dompurify": "2.2.7",
     "marked": "2.0.1",
     "react": "17.0.2",
     "react-dom": "17.0.2",
+    "react-i18next": "^11.8.15",
     "react-textarea-autosize": "8.3.2",
     "react-toastify": "7.0.3",
     "tslib": "2.2.0"
@@ -86,6 +94,26 @@
   "engines": {
     "npm": "7.x",
     "node": "14.x"
+  },
+  "babel": {
+    "presets": [
+      "@babel/preset-env",
+      "@babel/preset-react",
+      "@babel/preset-typescript"
+    ],
+    "plugins": [
+      "@babel/plugin-proposal-class-properties",
+      [
+        "i18next-extract",
+        {
+          "locales": [
+            "ja",
+            "en"
+          ],
+          "outputPath": "./public/locales/{{locale}}.json"
+        }
+      ]
+    ]
   },
   "scripts": {
     "heroku-postbuild": "make build-ssr && make build-ui"

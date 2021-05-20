@@ -1,0 +1,507 @@
+{
+  "": "",
+  "//developer": {
+    "mozilla": {
+      "org/en-US/docs/Learn/CSS'>CSS</a>": {
+        "": ""
+      }
+    }
+  },
+  "1": {
+    " Who are you?": ""
+  },
+  "1 with minimum dimensions of 200x200 pixels": {
+    "": ""
+  },
+  "1 with minimum dimensions of 24x24 pixels": {
+    "": ""
+  },
+  "1 with minimum dimensions of 50x50 pixels": {
+    "": ""
+  },
+  "2": {
+    " What is this Feedback Forum for?": ""
+  },
+  "A letter avatar based on your initials is generated for you": {
+    "": ""
+  },
+  "A private site prevents unauthenticated users from viewing or interacting with its content": {
+    "": "",
+    " ": ""
+  },
+  "Actions": "",
+  "Add new": "",
+  "Additional information is available in our": "",
+  "Administration": "",
+  "Administrators": "",
+  "Advanced": "",
+  "An email message was sent to": "",
+  "Are you sure?": "",
+  "Authentication": "",
+  "Authorize URL": "",
+  "Avatar": "",
+  "Avoid nested selectors": "",
+  "Backup your data": "",
+  "Because this is your first sign in, please enter your name": {
+    "": ""
+  },
+  "Block User": "",
+  "Blocked": "",
+  "Button Preview": "",
+  "Callback URL": "",
+  "Cancel": "",
+  "Click the link and you’ll be signed in": {
+    "": ""
+  },
+  "Click the link to finish your registration": {
+    "": ""
+  },
+  "Click the link to update your email": {
+    "": ""
+  },
+  "Client ID": "",
+  "Client Secret": "",
+  "Collaborators": "",
+  "Color": "",
+  "Complete your profile": "",
+  "Confirm": "",
+  "Confirm your new email": "",
+  "Confirmation": "",
+  "Congratulations! It worked!": "",
+  "Consider voting on existing posts instead": {
+    "": ""
+  },
+  "Custom": "",
+  "Custom CSS": "",
+  "Custom CSS allows you to change the look and feel of Fider and apply your own branding": {
+    "": ""
+  },
+  "Custom CSS might break the design of your site as Fider evolves": {
+    " You can minimize conflict by following these recommendations": ""
+  },
+  "Custom Domain": "",
+  "Custom domains allow you to access your app via your own domain name (for example, ": "",
+  "Customize only the essential": {
+    "": ""
+  },
+  "Delete": "",
+  "Delete My Account": "",
+  "Delete account": "",
+  "Delete tag": "",
+  "Demote to Visitor": "",
+  "Describe your suggestion (optional)": "",
+  "Description": "",
+  "Disabled": "",
+  "Discussion": "",
+  "Display Name": "",
+  "Download your data": "",
+  "EDisabled": "",
+  "Edit": "",
+  "Email": "",
+  "Email is not required, but highly recommended": {
+    " If invalid or not found, new users won&apos;t be able to receive notifications": {
+      "": ""
+    }
+  },
+  "Enabled": "",
+  "Enter your suggestion here": {
+    "": {
+      "": {
+        "": ""
+      }
+    }
+  },
+  "Enter your suggestion here...": "Enter your suggestion here...",
+  "Error": "",
+  "Error #1": "",
+  "Error #2": "",
+  "Export": "",
+  "Export Posts": "",
+  "Failed to delete your account": {
+    " Try again later": ""
+  },
+  "Failed to retrieve OAuth configuration": {
+    " Try again later": ""
+  },
+  "Fider might change the structure of the HTML at any time": {
+    " It&apos;s likely that such changes would invalidate some rules": {
+      "": ""
+    }
+  },
+  "General": "",
+  "Gravatar": "",
+  "Hello, ": "",
+  "ID": "",
+  "If enabled, only already registered and invited users will be able to sign in to this site": {
+    "": ""
+  },
+  "If you have an account or an invitation, you may use following options to sign in": {
+    "": ""
+  },
+  "Invitation": "",
+  "Invitations": "",
+  "Invite people to share their feedback": "",
+  "It is recommended to only request the minimum scopes we need to fetch the user <strong>id</strong>, <strong>name</strong> and <strong>email</strong> ": {
+    " Multiple scopes must be separated by space": {
+      "": ""
+    }
+  },
+  "It&apos;s recommended that you post <strong>at least 3</strong> suggestions here before sharing this site": {
+    " The initial content is key to start the interactions with your audience": {
+      "": ""
+    }
+  },
+  "JSON Path": "",
+  "Keep it simple": "",
+  "Leave a comment": "",
+  "Letter": "",
+  "Logo": "",
+  "Manage your profile settings": "",
+  "Manage your site administrators and collaborators": "",
+  "Manage your site authentication": "",
+  "Manage your site privacy": "",
+  "Manage your site settings": "",
+  "Manage your site tags": "",
+  "Mark All as Read": "",
+  "Members": "",
+  "Message": "",
+  "Moderation": "",
+  "Most Discussed": "",
+  "Most Wanted": "",
+  "Name": "",
+  "New OAuth Provider": "",
+  "New Post": "",
+  "No country is selected": "",
+  "No description provided": {
+    "": ""
+  },
+  "No one has commented yet": {
+    "": ""
+  },
+  "No posts have been created yet": {
+    "": ""
+  },
+  "No results matched your search, try something different": {
+    "": ""
+  },
+  "No unread notifications": {
+    "": ""
+  },
+  "No users found": {
+    "": ""
+  },
+  "None": "",
+  "Notifications": "Notifications",
+  "OAuth Documentation": "",
+  "OAuth Provider": "",
+  "OAuth Providers": "",
+  "OK": "",
+  "Path to extract User ID from the JSON": {
+    " This ID <strong>must</strong> be unique within the provider or unexpected side effects might happen": {
+      " For example below, the path would be <strong>id</strong>": {
+        "": ""
+      }
+    }
+  },
+  "Path to extract User ID from the JSON. This ID <strong>must</strong> be unique within the provider or unexpected side effects might happen. For example below, the path would be <strong>id</strong>.": "",
+  "Path to extract user Display Name from the JSON": {
+    " This is optional, but <strong>highly</strong> recommended": {
+      " For the example below, the path would be <strong>profile": {
+        "name</strong>": {
+          "": ""
+        }
+      }
+    }
+  },
+  "Path to extract user Email from the JSON": {
+    " This is optional, but <strong>highly</strong> recommended": {
+      " For the example below, the path would be <strong>profile": {
+        "emails[0]</strong>": {
+          "": ""
+        }
+      }
+    }
+  },
+  "Please note that it may take up to 72 hours for the change to take effect worldwide due to DNS propagation": {
+    "": ""
+  },
+  "Posted by": "",
+  "Preview": "",
+  "Privacy": "",
+  "Private": "",
+  "Private Tags": "",
+  "Private site": "",
+  "Profile API URL": "",
+  "Promote to Administrator": "",
+  "Promote to Collaborator": "",
+  "Public": "",
+  "Public Tags": "",
+  "Read on last 30 days": "",
+  "Recent": "",
+  "Regenerate API Key": "",
+  "Respond": "",
+  "Sample Invite": "",
+  "Save": "",
+  "Scope": "",
+  "Search for users by name": {
+    "": {
+      "": {
+        "": ""
+      }
+    }
+  },
+  "Send": "",
+  "Send a sample email to": "",
+  "Send a sample email to email": "Send a sample email to {{ email }}",
+  "Send invitations to": "",
+  "Settings": "Settings",
+  "Shoot! Well, this is unexpected…": "",
+  "Sign in": "",
+  "Sign out": "",
+  "Similar posts": "",
+  "Site Settings": "",
+  "Something went wrong": {
+    "": {
+      "": {
+        "": ""
+      }
+    }
+  },
+  "Status": "",
+  "Status Changed": "",
+  "Status is mandatory": "",
+  "Stay up to date with what's happening": "",
+  "Stored it securely on your servers and never store it in the client side of your app": {
+    "": ""
+  },
+  "Subject": "",
+  "Submit": "",
+  "Tags": "",
+  "Test": "",
+  "Thank you for registering!": "",
+  "The API Key is only shown whenever generated": {
+    " If your Key is lost or has been compromised, generated a new one and take note of it": {
+      "": ""
+    }
+  },
+  "The URL to fetch the authenticated user info": {
+    " If empty, Fider will try to parse the user info from the Access Token": {
+      "": ""
+    }
+  },
+  "The message is shown on this site&apos;s home page": {
+    " Use it to help visitors \n            understad what this space is about and the importance of their feedback": {
+      "\n            Leave it empty for a default message": {
+        "": ""
+      }
+    },
+    " Use it to help visitors understad what this space is about and the importance of their feedback": {
+      " Leave it empty for a default message": {
+        "": ""
+      }
+    }
+  },
+  "The tag": "",
+  "The title": "",
+  "The title is used on the header, emails, notifications and SEO content": {
+    " Keep it short and simple": {
+      " \n            The product/service name is usually the best choice": {
+        "": ""
+      },
+      " The product/service name is usually the best choice": {
+        "": ""
+      }
+    }
+  },
+  "There aren’t any private tags yet": {
+    "": ""
+  },
+  "There aren’t any public tags yet": {
+    "": ""
+  },
+  "These tags are only visible for members of this site": {
+    "": ""
+  },
+  "These tags are visible to all visitors": {
+    "": ""
+  },
+  "This comment has been edited by {{ name }} on {{ editedAt }}": "This comment has been edited by {{ name }} on {{ editedAt }}",
+  "This is a powerful and flexible feature, but requires basic understanding of ": "",
+  "This is the content of the invite": {
+    " Be polite and explain what this invite is for, otherwise there&apos;s a high change people will ignore your\n              message": {
+      "": ""
+    },
+    " Be polite and explain what this invite is for, otherwise there&apos;s a high change people will ignore your message": {
+      "": ""
+    }
+  },
+  "This is the subject that will be used on the invitation email": {
+    " Keep it short and sweet": {
+      "": ""
+    }
+  },
+  "This operation <strong>cannot</strong> be undone": {
+    "": ""
+  },
+  "This process is irreversible": {
+    "": "",
+    " Please be certain": {
+      "": ""
+    }
+  },
+  "This provider will be available for everyone to use during the sign in process": {
+    "\n                     It is recommended that you keep it disable and test it before enabling it": {
+      " \n                     The Test button is available after saving this configuration": {
+        "": ""
+      }
+    }
+  },
+  "This section is used to configure how Fider will fetch user after the authentication process": {
+    "": ""
+  },
+  "This text is used as a placeholder for the suggestion&apos;s text box": {
+    " Use it to invite your visitors into sharing their suggestions and feedback": {
+      " Leave it empty for a default message": {
+        "": ""
+      }
+    }
+  },
+  "Title": "",
+  "Title is mandatory": "",
+  "To learn how to use the API, read the": "",
+  "To reactivate this site, sign in with an administrator account and update the required settings": {
+    "": ""
+  },
+  "Token URL": "",
+  "Trending": "",
+  "Unblock User": "",
+  "Unread": "",
+  "Use following panel to choose which events you&apos;d like to receive notification": "",
+  "Use this button to download a CSV file with all posts \n            in this site": {
+    " This can be useful to analyse the data with \n            an external tool or simply to back it up": {
+      "": ""
+    }
+  },
+  "Use this button to download a CSV file with all posts in this site": {
+    " This can be useful to analyse the data with an external tool or simply to back it up": {
+      "": ""
+    }
+  },
+  "Use this button to download a ZIP file with your data in JSON format": {
+    " This is a full backup and contains all of your data": {
+      "": ""
+    }
+  },
+  "User Profile": "",
+  "Users won&apos;t be able to sign in with this Provider": {
+    "": ""
+  },
+  "Version updates may change the structure of the HTML and may disable custom CSS": {
+    "": ""
+  },
+  "Visibility": "",
+  "Voters": "",
+  "Votes from this post will be merged into original post": {
+    "": ""
+  },
+  "We have just sent a confirmation link to": "",
+  "We have just sent a confirmation link to ": "",
+  "We highly recommend to send yourself a sample email for you to verify if everything is correct before inviting your list of contacts": {
+    "": ""
+  },
+  "We need to identify you to setup your new Fider account": {
+    "": ""
+  },
+  "We'd love to hear what you're thinking about": {
+    " \n\nWhat can we do better? This is the place for you to vote, discuss and share ideas": {
+      "": ""
+    }
+  },
+  "Welcome Message": "",
+  "What do you want to see?": "",
+  "What's going on with this post? Let your users know what are your plans": {
+    "": {
+      "": {
+        "": ""
+      }
+    }
+  },
+  "When you choose to delete your account, we will erase all your personal information forever": {
+    " The content you have published will remain, but it will be anonymised": {
+      "": ""
+    }
+  },
+  "Whenever you&apos;re ready, click the following button to send out these invites": {
+    "": ""
+  },
+  "Why are you deleting this post? (optional)": "",
+  "You can send this invite to a maximum of 30 recipients each time": {
+    "": ""
+  },
+  "You can use these section to add any authentication provider thats supports the OAuth2 protocol": {
+    "": ""
+  },
+  "You&apos;ll not receive any notification about this post": {
+    "": ""
+  },
+  "Your account doesn't have an email": {
+    "": ""
+  },
+  "Your email is private and will never be publicly displayed": {
+    "": ""
+  },
+  "Your privacy settings have been saved": {
+    "": ""
+  },
+  "Your profile doesn&apos;t have an email": "",
+  "You’re receiving notifications about activity on this post": {
+    "": ""
+  },
+  "administrator": "",
+  "blocked": "",
+  "can edit and manage content, but not permissions and settings": {
+    "": ""
+  },
+  "change": "",
+  "collaborator": "",
+  "description": "",
+  "displayName": "",
+  "edited": "",
+  "feedback": {
+    "yourcompany": {
+      "com": ""
+    }
+  },
+  "have full access to edit and manage content, permissions and all site settings": {
+    "": ""
+  },
+  "is a private space and requires an invitation to join it": {
+    "": ""
+  },
+  "is currently locked": {
+    "": ""
+  },
+  "logo": "",
+  "more": "",
+  "new posts on this site": "",
+  "official documentation": "",
+  "randomize": "",
+  "see details": "",
+  "status": "",
+  "subdomain": "",
+  "title": "",
+  "users are unable to log into this site": {
+    "": ""
+  },
+  "view more": "",
+  "will be removed from all posts": {
+    "": ""
+  },
+  "will be used based on your email": {
+    " If you don&apos;t have a Gravatar, a letter avatar based on your initials is generated for you": {
+      "": ""
+    }
+  },
+  "will be used based on your email. If you don&apos;t have a Gravatar, a letter avatar based on your initials is generated for you.": "",
+  "your company or product name": ""
+}

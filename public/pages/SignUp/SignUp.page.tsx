@@ -1,6 +1,7 @@
 import React from "react"
 import { SignInControl, Modal, Button, DisplayError, Form, Input, Message, LegalAgreement } from "@fider/components"
 import { jwt, actions, Failure, querystring, Fider } from "@fider/services"
+import { withTranslation } from "react-i18next"
 
 interface OAuthUser {
   token: string
@@ -22,7 +23,7 @@ interface SignUpPageState {
   }
 }
 
-export default class SignUpPage extends React.Component<any, SignUpPageState> {
+class SignUpPage extends React.Component<any, SignUpPageState> {
   private user?: OAuthUser
 
   constructor(props: any) {
@@ -126,14 +127,15 @@ export default class SignUpPage extends React.Component<any, SignUpPageState> {
   }
 
   public render() {
+    const { t } = this.props
     const modal = (
       <Modal.Window canClose={false} isOpen={this.state.submitted} onClose={this.noop}>
-        <Modal.Header>Thank you for registering!</Modal.Header>
+        <Modal.Header>{t("Thank you for registering!")}</Modal.Header>
         <Modal.Content>
           <p>
-            We have just sent a confirmation link to <b>{this.state.email}</b>.
+            {t("We have just sent a confirmation link to")} <b>{this.state.email}</b>.
           </p>
-          <p>Click the link to complete the registration.</p>
+          <p>{t("Click the link to complete the registration.")}</p>
         </Modal.Content>
       </Modal.Window>
     )
@@ -145,7 +147,7 @@ export default class SignUpPage extends React.Component<any, SignUpPageState> {
           <img className="logo" alt="Logo" src="https://getfider.com/images/logo-100x100.png" />
         </div>
 
-        <h3 className="text-display mb-2">1. Who are you?</h3>
+        <h3 className="text-display mb-2">{t("1. Who are you?")}</h3>
         <DisplayError fields={["token"]} error={this.state.error} />
 
         {this.user ? (
@@ -154,19 +156,19 @@ export default class SignUpPage extends React.Component<any, SignUpPageState> {
           </p>
         ) : (
           <>
-            <p>We need to identify you to setup your new Fider account.</p>
+            <p>{t("We need to identify you to setup your new Fider account.")}</p>
             <SignInControl useEmail={false} />
             <Form error={this.state.error}>
-              <Input field="name" maxLength={100} onChange={this.setName} placeholder="Name" />
-              <Input field="email" maxLength={200} onChange={this.setEmail} placeholder="Email" />
+              <Input field="name" maxLength={100} onChange={this.setName} placeholder={t("Name")} />
+              <Input field="email" maxLength={200} onChange={this.setEmail} placeholder={t("Email")} />
             </Form>
           </>
         )}
 
-        <h3 className="text-display mb-2 mt-8">2. What is this Feedback Forum for?</h3>
+        <h3 className="text-display mb-2 mt-8">{t("2. What is this Feedback Forum for?")}</h3>
 
         <Form error={this.state.error} className="mb-8">
-          <Input field="tenantName" maxLength={60} onChange={this.setTenantName} placeholder="your company or product name" />
+          <Input field="tenantName" maxLength={60} onChange={this.setTenantName} placeholder={t("your company or product name")} />
           {!Fider.isSingleHostMode() && (
             <Input field="subdomain" maxLength={40} onChange={this.setSubdomain} placeholder="subdomain" suffix={Fider.settings.domain}>
               {this.state.subdomain.available && (
@@ -188,9 +190,11 @@ export default class SignUpPage extends React.Component<any, SignUpPageState> {
         </Form>
 
         <Button variant="primary" size="large" onClick={this.confirm}>
-          Confirm
+          {t("Confirm")}
         </Button>
       </div>
     )
   }
 }
+
+export default withTranslation()(SignUpPage)

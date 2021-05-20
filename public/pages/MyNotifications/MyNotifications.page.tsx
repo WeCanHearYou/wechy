@@ -4,9 +4,11 @@ import { Notification } from "@fider/models"
 import { Markdown, Moment, PageTitle } from "@fider/components"
 import { actions } from "@fider/services"
 import { HStack, VStack } from "@fider/components/layout"
+import { withTranslation } from "react-i18next"
 
 interface MyNotificationsPageProps {
   notifications: Notification[]
+  t: (key: string) => string
 }
 
 interface MyNotificationsPageState {
@@ -14,7 +16,7 @@ interface MyNotificationsPageState {
   recent: Notification[]
 }
 
-export default class MyNotificationsPage extends React.Component<MyNotificationsPageProps, MyNotificationsPageState> {
+class MyNotificationsPage extends React.Component<MyNotificationsPageProps, MyNotificationsPageState> {
   constructor(props: MyNotificationsPageProps) {
     super(props)
 
@@ -57,27 +59,28 @@ export default class MyNotificationsPage extends React.Component<MyNotifications
   }
 
   public render() {
+    const { t } = this.props
     return (
       <div id="p-my-notifications" className="page container">
-        <PageTitle title="Notifications" subtitle="Stay up to date with what's happening" />
+        <PageTitle title={t("Notifications")} subtitle={t("Stay up to date with what's happening")} />
 
         <HStack spacing={4} className="mt-8 mb-2">
-          <h4 className="text-title">Unread</h4>
+          <h4 className="text-title">{t("Unread")}</h4>
           {this.state.unread.length > 0 && (
             <a href="#" className="text-link text-xs" onClick={this.markAllAsRead}>
-              Mark All as Read
+              {t("Mark All as Read")}
             </a>
           )}
         </HStack>
 
         <VStack spacing={4}>
           {this.state.unread.length > 0 && this.items(this.state.unread)}
-          {this.state.unread.length === 0 && <span className="text-muted">No unread notifications.</span>}
+          {this.state.unread.length === 0 && <span className="text-muted">{t("No unread notifications.")}</span>}
         </VStack>
 
         {this.state.recent.length > 0 && (
           <>
-            <h4 className="text-title mt-8 mb-2">Read on last 30 days</h4>
+            <h4 className="text-title mt-8 mb-2">{t("Read on last 30 days")}</h4>
             <VStack spacing={4}>{this.items(this.state.recent)}</VStack>
           </>
         )}
@@ -85,3 +88,5 @@ export default class MyNotificationsPage extends React.Component<MyNotifications
     )
   }
 }
+
+export default withTranslation()(MyNotificationsPage)

@@ -4,6 +4,7 @@ import { UserSettings } from "@fider/models"
 import { Toggle, Field } from "@fider/components"
 import { useFider } from "@fider/hooks"
 import { HStack, VStack } from "@fider/components/layout"
+import { useTranslation } from "react-i18next"
 
 interface NotificationSettingsProps {
   userSettings: UserSettings
@@ -17,6 +18,7 @@ const EmailChannel: Channel = 2
 export const NotificationSettings = (props: NotificationSettingsProps) => {
   const fider = useFider()
   const [userSettings, setUserSettings] = useState(props.userSettings)
+  const { t } = useTranslation()
 
   const isEnabled = (settingsKey: string, channel: Channel): boolean => {
     if (settingsKey in userSettings) {
@@ -76,8 +78,8 @@ export const NotificationSettings = (props: NotificationSettingsProps) => {
 
   return (
     <>
-      <Field label="Notifications">
-        <p className="text-muted">Use following panel to choose which events you&apos;d like to receive notification</p>
+      <Field label={t("Notifications")}>
+        <p className="text-muted">{t("Use following panel to choose which events you&apos;d like to receive notification")}</p>
 
         <div className="notifications-settings">
           <VStack spacing={4} divide={true} className="p-2 bg-gray-50 rounded">
