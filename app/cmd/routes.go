@@ -16,6 +16,7 @@ func routes(r *web.Engine) *web.Engine {
 	r.Worker().Use(middlewares.WorkerSetup())
 
 	r.Use(middlewares.CatchPanic())
+	r.Use(middlewares.ForceHTTPS())
 
 	r.NotFound(func(c *web.Context) error {
 		next := func(c *web.Context) error {

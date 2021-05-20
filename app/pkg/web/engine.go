@@ -105,9 +105,9 @@ func (e *Engine) Start(address string) {
 		keyFilePath  = ""
 	)
 
-	if env.Config.SSLCert != "" {
-		certFilePath = env.Etc(env.Config.SSLCert)
-		keyFilePath = env.Etc(env.Config.SSLCertKey)
+	if env.Config.TLS.Certificate != "" {
+		certFilePath = env.Etc(env.Config.TLS.Certificate)
+		keyFilePath = env.Etc(env.Config.TLS.PrivateKey)
 	}
 
 	stdLog.SetOutput(ioutil.Discard)
@@ -128,7 +128,7 @@ func (e *Engine) Start(address string) {
 		err         error
 		certManager *CertificateManager
 	)
-	if env.Config.AutoSSL {
+	if env.Config.TLS.Automatic {
 		certManager, err = NewCertificateManager(certFilePath, keyFilePath)
 		if err != nil {
 			panic(errors.Wrap(err, "failed to initialize CertificateManager"))

@@ -12,7 +12,7 @@ import (
 //Returns an exitcode, 0 for OK and 1 for ERROR
 func RunPing() int {
 	protocol := "http://"
-	if env.Config.SSLCert != "" || env.Config.AutoSSL {
+	if env.Config.TLS.Certificate != "" || env.Config.TLS.Automatic {
 		http.DefaultTransport.(*http.Transport).TLSClientConfig = &tls.Config{
 			InsecureSkipVerify: true,
 		}
