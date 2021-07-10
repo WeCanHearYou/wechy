@@ -74,25 +74,36 @@ jobs:
     steps:
       - uses: actions/checkout@v2
 
+      - name: Docker meta
+        id: docker_meta
+        uses: crazy-max/ghaction-docker-meta@v1
+        with:
+          images: getfider/fider
+          tag-sha: ${{ github.event.workflow_run.event == 'push' }}
+
       - name: extract variables
         run: |
           echo "##[set-output name=sha7;]$(echo ${GITHUB_SHA::7})"
           echo sha7=${GITHUB_SHA::7}
         id: vars
 
-      - run: docker build --build-arg buildnumber=${{ steps.vars.outputs.sha7 }} -t getfider/fider .
+      - name: Set up QEMU
+        uses: docker/setup-qemu-action@v1
 
-      - run: mkdir -p ./out
+      - name: Set up Docker Buildx
+        uses: docker/setup-buildx-action@v1
 
-      - run: docker save -o ./out/fider.tar getfider/fider
-
-      - run: echo ${{ github.event.number }} > ./out/pr
-        if: ${{ github.event_name == 'pull_request' }}
-
-      - run: echo ${{ steps.vars.outputs.sha7 }} > ./out/sha7
-        if: ${{ github.event_name == 'push' }}
-
-      - uses: actions/upload-artifact@v2
+      - name: Login to DockerHub
+        uses: docker/login-action@v1
         with:
-          name: out
-          path: out/
+          username: ${{ secrets.DOCKER_USER }}
+          password: ${{ secrets.DOCKER_PASS }}
+
+      - name: Build and push
+        uses: docker/build-push-action@v2
+        with:
+          push: true
+          build-args: BUILDNUMBER=${{ steps.vars.outputs.sha7 }}
+          platforms: linux/amd64,linux/arm/v7
+          tags: ${{ steps.docker_meta.outputs.tags }}
+          labels: ${{ steps.docker_meta.outputs.labels }}

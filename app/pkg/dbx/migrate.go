@@ -7,7 +7,6 @@ import (
 	"io/ioutil"
 	"os"
 	"sort"
-	"strconv"
 	"strings"
 
 	"github.com/getfider/fider/app/models/dto"
@@ -32,8 +31,8 @@ func Migrate(ctx context.Context, path string) error {
 		return errors.Wrap(err, "failed to read files from dir '%s'", path)
 	}
 
-	versions := make([]int, len(files))
-	versionFiles := make(map[int]string, len(files))
+	versions := make([]string, len(files))
+	versionFiles := make(map[string]string, len(files))
 	for i, file := range files {
 		fileName := file.Name()
 		parts := strings.Split(fileName, "_")
@@ -41,13 +40,10 @@ func Migrate(ctx context.Context, path string) error {
 			return errors.New("migration file must have exactly 12 chars for version: '%s' is invalid.", fileName)
 		}
 
-		versions[i], err = strconv.Atoi(parts[0])
+		versions[i] = parts[0]
 		versionFiles[versions[i]] = fileName
-		if err != nil {
-			return errors.Wrap(err, "failed to convert '%s' to number", parts[0])
-		}
 	}
-	sort.Ints(versions)
+	sort.Strings(versions)
 
 	log.Infof(ctx, "Found total of @{Total} migration files.", dto.Props{
 		"Total": len(versions),
@@ -90,7 +86,7 @@ func Migrate(ctx context.Context, path string) error {
 	return nil
 }
 
-func runMigration(ctx context.Context, version int, path, fileName string) error {
+func runMigration(ctx context.Context, version, path, fileName string) error {
 	filePath := env.Path(path + "/" + fileName)
 	content, err := ioutil.ReadFile(filePath)
 	if err != nil {
@@ -115,29 +111,29 @@ func runMigration(ctx context.Context, version int, path, fileName string) error
 	return trx.Commit()
 }
 
-func getLastMigration() (int, error) {
+func getLastMigration() (string, error) {
 	_, err := conn.Exec(`CREATE TABLE IF NOT EXISTS migrations_history (
 		version     BIGINT PRIMARY KEY,
 		filename    VARCHAR(100) null,
-		date	 			TIMESTAMPTZ NOT NULL DEFAULT NOW()
+		date        TIMESTAMPTZ NOT NULL DEFAULT NOW()
 	)`)
 	if err != nil {
-		return 0, err
+		return "", err
 	}
 
-	var lastVersion sql.NullInt64
-	row := conn.QueryRow("SELECT MAX(version) FROM migrations_history LIMIT 1")
+	var lastVersion sql.NullString
+	row := conn.QueryRow("SELECT CAST(MAX(version) as varchar) FROM migrations_history LIMIT 1")
 	err = row.Scan(&lastVersion)
 	if err != nil {
-		return 0, err
+		return "", err
 	}
 
 	if !lastVersion.Valid {
 		// If it's the first run, maybe we have records on old migrations table, so try to get from it.
 		// This SHOULD be removed in the far future.
-		row := conn.QueryRow("SELECT version FROM schema_migrations LIMIT 1")
+		row := conn.QueryRow("SELECT CAST(version as varchar) FROM schema_migrations LIMIT 1")
 		_ = row.Scan(&lastVersion)
 	}
 
-	return int(lastVersion.Int64), nil
+	return lastVersion.String, nil
 }

@@ -3,20 +3,19 @@
 #####################
 FROM golang:1.16.5-buster AS server-builder 
 
-ARG buildnumber=local
+ARG BUILDNUMBER=local
+ARG TARGETVARIANT
 
-RUN mkdir /server
 WORKDIR /server
 
 COPY . .
-RUN BUILDNUMBER=${buildnumber} GOOS=linux GOARCH=amd64 make build-server
+RUN GOARM=$(echo "$TARGETVARIANT" | tail -c 2) make build-server
 
 #################
 ### UI Build Step
 #################
-FROM node:14-buster AS ui-builder 
+FROM --platform=linux/amd64 node:14-buster AS ui-builder 
 
-RUN mkdir /ui
 WORKDIR /ui
 
 COPY . .
@@ -32,7 +31,6 @@ FROM debian:buster-slim
 RUN apt-get update
 RUN apt-get install -y ca-certificates
 
-RUN mkdir /app
 WORKDIR /app
 
 COPY --from=server-builder /server/migrations /app/migrations
