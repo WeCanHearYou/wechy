@@ -97,6 +97,25 @@ func UpdatePrivacy() web.HandlerFunc {
 	}
 }
 
+// UpdateAllowingEmailAuth update current tenant's allow email auth settings
+func UpdateAllowingEmailAuth() web.HandlerFunc {
+	return func(c *web.Context) error {
+		action := new(actions.UpdateTenantAllowingEmailAuth)
+		if result := c.BindTo(action); !result.Ok {
+			return c.HandleValidation(result)
+		}
+
+		updateSettings := &cmd.UpdateTenantAllowingEmailAuthSettings{
+			IsAllowingEmailAuth: action.IsAllowingEmailAuth,
+		}
+		if err := bus.Dispatch(c, updateSettings); err != nil {
+			return c.Failure(err)
+		}
+
+		return c.Ok(web.Map{})
+	}
+}
+
 // ManageMembers is the page used by administrators to change member's role
 func ManageMembers() web.HandlerFunc {
 	return func(c *web.Context) error {

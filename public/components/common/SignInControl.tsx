@@ -14,6 +14,7 @@ interface SignInControlProps {
 
 export const SignInControl: React.FunctionComponent<SignInControlProps> = (props) => {
   const fider = useFider()
+  const [useEmail, setUseEmail] = useState(props.useEmail)
   const [email, setEmail] = useState("")
   const [error, setError] = useState<Failure | undefined>(undefined)
 
@@ -58,7 +59,7 @@ export const SignInControl: React.FunctionComponent<SignInControlProps> = (props
 
       {providersLen > 0 && <Divider />}
 
-      {props.useEmail && (
+      {useEmail ? (
         <div>
           <p>Enter your email address to sign in</p>
           <Form error={error}>
@@ -75,6 +76,17 @@ export const SignInControl: React.FunctionComponent<SignInControlProps> = (props
               }
             />
           </Form>
+          {!props.useEmail && <p className="text-red-700 mt-1">Currently only allowed to sign in to an administrator account</p>}
+        </div>
+      ) : (
+        <div>
+          <p className="text-muted">
+            Email authentication has been disabled by an administrator. If you have an administrator account and need to bypass this restriction, please{" "}
+            <span className="text-bold clickable" onClick={() => setUseEmail(true)}>
+              click here
+            </span>
+            .
+          </p>
         </div>
       )}
     </div>

@@ -20,6 +20,10 @@ type UpdateTenantPrivacySettings struct {
 	IsPrivate bool
 }
 
+type UpdateTenantAllowingEmailAuthSettings struct {
+	IsAllowingEmailAuth bool
+}
+
 type UpdateTenantSettings struct {
 	Logo           *dto.ImageUpload
 	Title          string

@@ -3,8 +3,10 @@ import "./Toggle.scss"
 import React, { useState } from "react"
 import { classSet } from "@fider/services"
 import { HStack } from "../layout"
+import { DisplayError, ValidationContext } from "@fider/components"
 
 interface ToggleProps {
+  field?: string
   label?: string
   active: boolean
   disabled?: boolean
@@ -33,11 +35,18 @@ export const Toggle: React.FC<ToggleProps> = (props) => {
   })
 
   return (
-    <HStack spacing={2}>
-      <button onClick={toggle} type="button" className={className} role="switch">
-        <span aria-hidden="true" className="shadow"></span>
-      </button>
-      {props.label && <span className="text-sm">{props.label}</span>}
-    </HStack>
+    <ValidationContext.Consumer>
+      {(ctx) => (
+        <>
+          <HStack spacing={2}>
+            <button onClick={toggle} type="button" className={className} role="switch">
+              <span aria-hidden="true" className="shadow"></span>
+            </button>
+            {props.label && <span className="text-sm">{props.label}</span>}
+          </HStack>
+          {props.field && <DisplayError fields={[props.field]} error={ctx.error} />}
+        </>
+      )}
+    </ValidationContext.Consumer>
   )
 }

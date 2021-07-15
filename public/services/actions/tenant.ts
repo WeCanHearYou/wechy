@@ -45,6 +45,12 @@ export const updateTenantPrivacy = async (isPrivate: boolean): Promise<Result> =
   })
 }
 
+export const updateTenantAllowingEmailAuth = async (isAllowingEmailAuth: boolean): Promise<Result> => {
+  return await http.post("/_api/admin/settings/emailauth", {
+    isAllowingEmailAuth,
+  })
+}
+
 export const checkAvailability = async (subdomain: string): Promise<Result<CheckAvailabilityResponse>> => {
   return await http.get<CheckAvailabilityResponse>(`/_api/tenants/${subdomain}/availability`)
 }

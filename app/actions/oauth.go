@@ -2,6 +2,7 @@ package actions
 
 import (
 	"context"
+	"github.com/getfider/fider/app"
 	"strings"
 
 	"github.com/getfider/fider/app/models/dto"
@@ -46,6 +47,18 @@ func (action *CreateEditOAuthConfig) IsAuthorized(ctx context.Context, user *ent
 // Validate if current model is valid
 func (action *CreateEditOAuthConfig) Validate(ctx context.Context, user *entity.User) *validate.Result {
 	result := validate.Success()
+
+	if action.Status == enum.OAuthConfigDisabled {
+		tenant := ctx.Value(app.TenantCtxKey).(*entity.Tenant)
+		activeProviders := &query.ListActiveOAuthProviders{}
+		if err := bus.Dispatch(ctx, activeProviders); err != nil {
+			return validate.Failed("Cannot retrieve OAuth providers")
+		}
+
+		if !tenant.IsAllowingEmailAuth && len(activeProviders.Result) == 1 {
+			result.AddFieldFailure("status", "You cannot disable this provider with neither email auth nor any other provider enabled.")
+		}
+	}
 
 	if action.Provider != "" {
 		getConfig := &query.GetCustomOAuthConfigByProvider{Provider: action.Provider}

@@ -159,8 +159,8 @@ func TestUserStorage_Register_MultipleProviders(t *testing.T) {
 
 	var tenantID int
 	err := trx.Get(&tenantID, `
-		INSERT INTO tenants (name, subdomain, created_at, status, is_private, custom_css, logo_bkey, locale) 
-		VALUES ('My Domain Inc.','mydomain', now(), 1, false, '', '', 'en')
+		INSERT INTO tenants (name, subdomain, created_at, status, is_private, custom_css, logo_bkey, locale, is_allowing_email_auth) 
+		VALUES ('My Domain Inc.','mydomain', now(), 1, false, '', '', 'en', true)
 		RETURNING id
 	`)
 	Expect(err).IsNil()

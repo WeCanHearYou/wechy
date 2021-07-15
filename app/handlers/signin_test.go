@@ -27,6 +27,7 @@ func TestSignInByEmailHandler_WithoutEmail(t *testing.T) {
 
 	server := mock.NewServer()
 	code, _ := server.
+		OnTenant(mock.DemoTenant).
 		ExecutePost(handlers.SignInByEmail(), "{ }")
 
 	Expect(code).Equals(http.StatusBadRequest)

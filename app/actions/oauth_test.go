@@ -2,6 +2,7 @@ package actions_test
 
 import (
 	"context"
+	"github.com/getfider/fider/app/models/dto"
 	"testing"
 
 	"github.com/getfider/fider/app"
@@ -16,6 +17,11 @@ import (
 
 func TestCreateEditOAuthConfig_InvalidInput(t *testing.T) {
 	RegisterT(t)
+
+	bus.AddHandler(func(ctx context.Context, q *query.ListActiveOAuthProviders) error {
+		q.Result = []*dto.OAuthProviderOption{}
+		return nil
+	})
 
 	testCases := []struct {
 		expected []string
@@ -42,9 +48,12 @@ func TestCreateEditOAuthConfig_InvalidInput(t *testing.T) {
 			},
 		},
 	}
+	ctx := context.WithValue(context.Background(), app.TenantCtxKey, &entity.Tenant{
+		IsAllowingEmailAuth: true,
+	})
 
 	for _, testCase := range testCases {
-		result := testCase.action.Validate(context.Background(), nil)
+		result := testCase.action.Validate(ctx, nil)
 		ExpectFailed(result, testCase.expected...)
 	}
 }
@@ -59,6 +68,11 @@ func TestCreateEditOAuthConfig_DefaultValues(t *testing.T) {
 func TestCreateEditOAuthConfig_AddNew_ValidInput(t *testing.T) {
 	RegisterT(t)
 
+	bus.AddHandler(func(ctx context.Context, q *query.ListActiveOAuthProviders) error {
+		q.Result = []*dto.OAuthProviderOption{}
+		return nil
+	})
+
 	action := &actions.CreateEditOAuthConfig{
 		DisplayName:       "My Provider",
 		Status:            enum.OAuthConfigEnabled,
@@ -72,7 +86,11 @@ func TestCreateEditOAuthConfig_AddNew_ValidInput(t *testing.T) {
 		JSONUserNamePath:  "user.name",
 		JSONUserEmailPath: "user.email",
 	}
-	result := action.Validate(context.Background(), nil)
+	ctx := context.WithValue(context.Background(), app.TenantCtxKey, &entity.Tenant{
+		IsAllowingEmailAuth: true,
+	})
+
+	result := action.Validate(ctx, nil)
 	ExpectSuccess(result)
 	Expect(action.ID).Equals(0)
 	Expect(action.Provider).HasLen(11)
@@ -94,6 +112,11 @@ func TestCreateEditOAuthConfig_EditExisting_NewSecret(t *testing.T) {
 		return app.ErrNotFound
 	})
 
+	bus.AddHandler(func(ctx context.Context, q *query.ListActiveOAuthProviders) error {
+		q.Result = []*dto.OAuthProviderOption{}
+		return nil
+	})
+
 	action := actions.NewCreateEditOAuthConfig()
 	action.Provider = "_NAME"
 	action.DisplayName = "My Provider"
@@ -107,8 +130,11 @@ func TestCreateEditOAuthConfig_EditExisting_NewSecret(t *testing.T) {
 	action.JSONUserIDPath = "user.id"
 	action.JSONUserNamePath = "user.name"
 	action.JSONUserEmailPath = "user.email"
+	ctx := context.WithValue(context.Background(), app.TenantCtxKey, &entity.Tenant{
+		IsAllowingEmailAuth: true,
+	})
 
-	result := action.Validate(context.Background(), nil)
+	result := action.Validate(ctx, nil)
 	ExpectSuccess(result)
 	Expect(action.ID).Equals(4)
 	Expect(action.Logo.BlobKey).Equals("hello-world.png")
@@ -131,6 +157,11 @@ func TestCreateEditOAuthConfig_EditExisting_OmitSecret(t *testing.T) {
 		return app.ErrNotFound
 	})
 
+	bus.AddHandler(func(ctx context.Context, q *query.ListActiveOAuthProviders) error {
+		q.Result = []*dto.OAuthProviderOption{}
+		return nil
+	})
+
 	action := actions.NewCreateEditOAuthConfig()
 	action.Provider = "_NAME2"
 	action.DisplayName = "My Provider"
@@ -143,8 +174,11 @@ func TestCreateEditOAuthConfig_EditExisting_OmitSecret(t *testing.T) {
 	action.JSONUserIDPath = "user.id"
 	action.JSONUserNamePath = "user.name"
 	action.JSONUserEmailPath = "user.email"
+	ctx := context.WithValue(context.Background(), app.TenantCtxKey, &entity.Tenant{
+		IsAllowingEmailAuth: true,
+	})
 
-	result := action.Validate(context.Background(), nil)
+	result := action.Validate(ctx, nil)
 	ExpectSuccess(result)
 	Expect(action.ID).Equals(5)
 	Expect(action.ClientSecret).Equals("MY_OLD_SECRET")
@@ -155,6 +189,11 @@ func TestCreateEditOAuthConfig_EditNonExisting(t *testing.T) {
 
 	bus.AddHandler(func(ctx context.Context, q *query.GetCustomOAuthConfigByProvider) error {
 		return app.ErrNotFound
+	})
+
+	bus.AddHandler(func(ctx context.Context, q *query.ListActiveOAuthProviders) error {
+		q.Result = []*dto.OAuthProviderOption{}
+		return nil
 	})
 
 	action := actions.NewCreateEditOAuthConfig()
@@ -169,7 +208,11 @@ func TestCreateEditOAuthConfig_EditNonExisting(t *testing.T) {
 	action.JSONUserIDPath = "user.id"
 	action.JSONUserNamePath = "user.name"
 	action.JSONUserEmailPath = "user.email"
-	result := action.Validate(context.Background(), nil)
+	ctx := context.WithValue(context.Background(), app.TenantCtxKey, &entity.Tenant{
+		IsAllowingEmailAuth: true,
+	})
+
+	result := action.Validate(ctx, nil)
 	Expect(result.Err).Equals(app.ErrNotFound)
 	Expect(result.Ok).IsFalse()
 }
